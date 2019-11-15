@@ -1,16 +1,29 @@
 {
   "author": "Brandon Barker <brandon.barker@gmail.com> (https://github.com/bbarker)",
   "private": true,
+  "name": "purescript-fitbit",
+  "version": "0.1.0",
   "scripts": {
     "clean": "rimraf output && rimraf .pulp-cache",
-    "build": "bower install && eslint src && pulp build -- --censor-lib --strict",
+    "build": "bower install && eslint src && pulp build -- --censor-lib --strict && fitbit-build",
     "test": "npm run build && pulp test",
-    "testbrowser": "./scripts/testbrowser"
+    "testbrowser": "./scripts/testbrowser",
+    "debug": "fitbit"
   },
-  "dependencies": {
-
+  "fitbit": {
+    "appUUID": "16ea92a0-8749-4368-8dcf-fc1b433715d6",
+    "appType": "app",
+    "appDisplayName": "purescript-fitbit",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#ffffff",
+    "requestedPermissions": [],
+    "buildTargets": [],
+    "i18n": {},
+    "defaultLanguage": "en-US"
   },
   "devDependencies": {
+    "@fitbit/sdk": "~4.0.1",
+    "@fitbit/sdk-cli": "^1.7.0",
     "bower": "^1.8.8",
     "eslint": "^4.19.1",
     "parcel-bundler": "^1.12.3",

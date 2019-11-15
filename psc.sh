@@ -38,9 +38,9 @@ docker run --rm -ti \
        --volume "$HOME/.ssh:$HOME/.ssh:ro" \
        --volume "$HOME/.pulp:$HOME/.pulp" \
        --volume "$HOME/.cache:$HOME/.cache" \
-       --volume "$HOME/.npmrc:$HOME/.npmrc" \
        --volume "$HOME/.npm:$HOME/.npm" \
        --volume "$HOME/.npm-packages:$HOME/.npm-packages" \
+      --volume "$HOME/.yarnrc:$HOME/.yarnrc" \
        --user "$UID" \
        --workdir /wd \
        -e "XDG_CONFIG_HOME=/wd/.xdg_config_home" \
